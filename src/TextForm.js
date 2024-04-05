@@ -80,64 +80,136 @@ export default function TextForm(props) {
 
   return (
     <>
-      <div>
+      <div
+        style={{
+          color: props.mode === "dark" ? "white" : "black",
+        }}
+      >
         <h1>{props.heading}</h1>
-        <div className="mb-3 ">
+        <div
+          className="mb-3 "
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           <textarea
             className="form-control"
             value={text}
             onChange={handleOnChange}
             id="mybox"
             rows="8"
+            style={{
+              color: props.mode === "dark" ? "white" : "black",
+              backgroundColor: props.mode === "dark" ? "#0047AB" : "white",
+            }}
           ></textarea>
         </div>
-        <button className="btn bg-primary " onClick={upper}>
+
+        <button
+          className="btn bg-primary "
+          onClick={upper}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Convert to Upper{" "}
         </button>
 
-        <button className="btn bg-primary mx-3   " onClick={lower}>
+        <button
+          className="btn bg-primary mx-3   "
+          onClick={lower}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Convert to Lower{" "}
         </button>
 
-        <button className="btn bg-primary    " onClick={SentenceCase}>
+        <button
+          className="btn bg-primary    "
+          onClick={SentenceCase}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Sentence case{" "}
         </button>
 
-        <button className="btn bg-primary  mx-3  " onClick={CapitalizedCase}>
+        <button
+          className="btn bg-primary  mx-3  "
+          onClick={CapitalizedCase}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Capitalized Case{" "}
         </button>
 
-        <button className="btn bg-primary    " onClick={Altcase}>
+        <button
+          className="btn bg-primary    "
+          onClick={Altcase}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           aLtErNaTiNg cAsE{" "}
         </button>
 
-        <button className="btn bg-primary  mx-3  " onClick={inverseAlt}>
+        <button
+          className="btn bg-primary  mx-3  "
+          onClick={inverseAlt}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           InVeRsE CaSe{" "}
         </button>
 
-        <button className="btn bg-primary  mx-3  " onClick={Trim}>
+        <button
+          className="btn bg-primary  mx-3  "
+          onClick={Trim}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Trim{" "}
         </button>
 
-        <button className="btn bg-primary  mx-3  " onClick={Reset}>
+        <button
+          className="btn bg-primary  mx-3  "
+          onClick={Reset}
+          style={{
+            color: props.mode === "dark" ? "white" : "black",
+          }}
+        >
           {" "}
           Reset{" "}
         </button>
       </div>
-      <div className=" container my-4">
+      <div
+        className=" container my-4"
+        style={{
+          color: props.mode === "dark" ? "white" : "black",
+        }}
+      >
         <h2>Your text Summary</h2>
         <p>
           Character Count - {text.length} Word Count - {text.split(" ").length}
         </p>
       </div>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          color: props.mode === "dark" ? "white" : "black",
+        }}
+      >
         <h3>Preview Here </h3>
         <p>{text}</p>
       </div>
